@@ -68,7 +68,6 @@ group :development do
   # gem "spring"
 end
 
-gem 'webpacker', '~> 5.4', '>= 5.4.3'
 
 gem "faker", "~> 3.1"
 

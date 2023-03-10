@@ -5,7 +5,7 @@
 <div class="container" id="cntbkng"> 
   <div class="row justify-content-center">
     <div class="col-7">
-      <%= form_with(model: @booking, local: true, data: { controller: "places", action: "google-maps-callback@window->places#initMap"}) do |form| %>
+      <%= form_with(model: @booking, local: true) do |form| %>
         <div class="form-group row mt-3">
           <%= form.label :how_many_people, "Number of People", class: "col-6 col-form-label text-light " %>
           <div class="col-14">
@@ -15,13 +15,13 @@
         <div class="form-group row">
           <%= form.label :booking_from, "Origin Address", class: "col-6 col-form-label text-light " %>
           <div class="col-14"> 
-            <%= form.search_field :booking_from, class: "form-control shadow mb-4 bg-white rounded", placeholder: "Enter the full address of origin.", data: { target: "places.field", action: "keydown->places#keydown" } %>
+            <%= form.search_field :booking_from, class: "form-control shadow mb-4 bg-white rounded", placeholder: "Enter the full address of origin."%>
           </div>
         </div>
         <div class="form-group row">
           <%= form.label :booking_to, "Destination Address", class: "col-6 col-form-label text-light " %>
           <div class="col-14"> 
-            <%= form.search_field :booking_to, class: "form-control shadow mb-4 bg-white rounded", placeholder: "Enter the full address of destination.", data: { target: "places.field", action: "keydown->places#keydown" } %>
+            <%= form.search_field :booking_to, class: "form-control shadow mb-4 bg-white rounded", placeholder: "Enter the full address of destination."%>
           </div>
         </div>
         <div class="form-group row">
