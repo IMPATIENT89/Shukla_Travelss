@@ -7,14 +7,18 @@
     <p class= "phome" id="homep">Our vehicles are well-maintained and come with 24/7 support, so you can rest assured that you'll be on the road safely and comfortably. </p>
     <p class= "phome" id="homep">At SHUKLA TRAVELS, we believe that everyone should have access to affordable and convenient vehicle rental options, and we're dedicated to making that a reality. So, whether you're planning a road trip, need a car for work, or simply want to upgrade your daily commute, we've got you covered.</p>
     <p class= "phome" id="homep">Thank you for choosing SHUKLA TRAVELS for your vehicle rental needs. We look forward to helping you hit the road!</p>
-    <%= link_to " Click here to view Our Team", our_team_path, class: "btn btn-primary" %>
+    <%= link_to " Click here to view Our Team", our_team_path, class: "btn btn-primary mb-2" %>
     <% if logged_in_as_customer? %>
-      <%= link_to "Your Booked Vehicles for a trip", bookings_path, class: "btn btn-primary" %>
+      <%= link_to "Your Booked Vehicles for a trip", bookings_path, class: "btn btn-primary mb-2
+      " %>
     <% elsif logged_in_as_host? %>
-      <%= link_to "Your Uploaded Vehicles", vehicles_path, class: "btn btn-primary" %>
+      <%= link_to "Your Uploaded Vehicles", vehicles_path, class: "btn btn-primary mb-2
+      " %>
     <% else %>
-      <%= link_to "Start Booking a Vehicle for trip", sign_in_customer_path, class: "btn btn-primary" %>
-      <%= link_to "Become a Host", sign_up_host_path, class: "btn btn-primary" %>
+      <%= link_to "Start Booking a Vehicle for trip", sign_in_customer_path, class: "btn btn-primary mb-2
+      " %>
+      <%= link_to "Become a Host", sign_up_host_path, class: "btn btn-primary mb-2
+      " %>
     <% end %> 
   </div>
 </body>
