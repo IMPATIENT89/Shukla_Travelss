@@ -1,1 +1,2 @@
-web:bundle exec rake db:migrate && bundel exec bin/rails server -b 0.0.0.0 -p {PORT:3000} && yarn build:css --watch 
+web: unset PORT && bin/rails server
+css: yarn build:css --watch
